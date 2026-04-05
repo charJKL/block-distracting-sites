@@ -1,0 +1,1 @@
+browser.tabs.create({url:"/frontend.html"});
