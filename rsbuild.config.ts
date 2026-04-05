@@ -1,10 +1,12 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
+import { pluginSass } from '@rsbuild/plugin-sass';
+import { pluginTypedCSSModules } from '@rsbuild/plugin-typed-css-modules';
 
 // Docs: https://rsbuild.rs/config/
 export default defineConfig(
 {
-	plugins: [pluginReact()],
+	plugins: [pluginReact(), pluginSass(), pluginTypedCSSModules()],
 	source:
 	{
 		entry:
