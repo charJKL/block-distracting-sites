@@ -1,0 +1,21 @@
+@use "../../App.module.scss" as app;
+
+.RuleRow
+{
+	display: flex;
+	flex-flow: row nowrap;
+	margin: 2px 0px;
+}
+
+.RuleRowId
+{
+	flex: 0 0 50px;
+}
+.RuleRowUrl
+{
+	flex: 1 0 0;
+}
+.RuleRowActions
+{
+	flex: 0 0 100px;
+}
