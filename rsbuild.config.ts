@@ -7,6 +7,10 @@ import { pluginTypedCSSModules } from '@rsbuild/plugin-typed-css-modules';
 export default defineConfig(
 {
 	plugins: [pluginReact(), pluginSass(), pluginTypedCSSModules()],
+	html:
+	{
+		template: "./src/frontend/index.html",
+	},
 	source:
 	{
 		entry:
