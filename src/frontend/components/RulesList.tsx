@@ -1,5 +1,6 @@
 import css from "./RulesList.module.scss";
 
+import { AddNewRule } from "./RulesList/AddNewRule";
 import { RuleRow } from "./RulesList/RuleRow";
 
 export function RulesList()
@@ -13,8 +14,11 @@ export function RulesList()
 
 	const rulesList = rules.map(rule => <RuleRow key={rule.id} rule={rule} />);
 	return (
-		<section className={css.RulesList}>
-			{ rulesList }
-		</section>
+		<>
+			<AddNewRule />
+			<section className={css.RulesList}>
+				{ rulesList }
+			</section>
+		</>
 	)
 }

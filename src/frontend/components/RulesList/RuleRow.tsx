@@ -9,7 +9,7 @@ interface RuleRowProps
 export function RuleRow({rule} : RuleRowProps)
 {
 
-	const onClickDelete = () => 
+	const onClickDelete = function()
 	{
 		alert("Delete rule");
 	}
