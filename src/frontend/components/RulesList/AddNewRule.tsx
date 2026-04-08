@@ -1,5 +1,9 @@
 import React, { useRef } from "react";
+import { FrontendComm as FrontendCommApi } from "browser-extension-std/frontend";
 import css from "./AddNewRule.module.scss";
+
+import { type REST } from "../../../protocol.ts";
+const FrontendComm = new FrontendCommApi<REST>(); // TODO move this to separate file, for testing only.
 
 export function AddNewRule()
 {
@@ -11,7 +15,7 @@ export function AddNewRule()
 		const regexp = refRegexp.current?.value;
 		if(regexp == null || regexp.length == 0) return;
 		
-		alert(`Add new rule = ${regexp}.`);
+		FrontendComm.sendToEndpoint("POST:/rules", {regexp: regexp});
 	}
 
 	return (
